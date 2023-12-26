@@ -27,9 +27,13 @@ object FLastActivity {
             _lastActivity = activity
         }
 
-        override fun onActivityStarted(activity: Activity) {}
+        override fun onActivityStarted(activity: Activity) {
+            _lastActivity = activity
+        }
 
-        override fun onActivityResumed(activity: Activity) {}
+        override fun onActivityResumed(activity: Activity) {
+            _lastActivity = activity
+        }
 
         override fun onActivityPaused(activity: Activity) {
             if (_lastActivity === activity) {
